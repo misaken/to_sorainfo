@@ -11,9 +11,9 @@ def replace_url_in_html(file_path, new_url):
     new_html_content = re.sub(r'https[^"]+', new_url, html_content)
 
     # 置き換えたHTMLを書き込み
-    print(new_html_content)
-    #with open(file_path, 'w') as file:
-        #file.write(new_html_content)
+    #print(new_html_content)
+    with open(file_path, 'w') as file:
+        file.write(new_html_content)
 
 if __name__ == "__main__":
     # 置き換えたいURL
