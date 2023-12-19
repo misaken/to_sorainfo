@@ -8,7 +8,10 @@ def replace_url_in_html(file_path, new_url):
 
     # URLを置き換え
     #new_html_content = re.sub(r'https://[a-zA-Z0-9\-\.]+', new_url, html_content)
-    new_html_content = re.sub(r'https[^"]+', new_url, html_content)
+    #new_html_content = re.sub(r'https[^"]+', new_url, html_content)
+    new_html_content = re.sub(r'URL=([^"]+)', new_url, html_content)
+
+    #print(new_url)
 
     # 置き換えたHTMLを書き込み
     #print(new_html_content)
